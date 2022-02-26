@@ -3,7 +3,7 @@
 SET CDP="%CD%"
 
 
-%CDP%\adb\adb start-server"
+%CDP%\adb\adb start-server
 echo Connect your Quest and allow USB debugging
 echo (You need to enable Developer Mode)
 pause
@@ -81,6 +81,7 @@ GOTO MENU
 :EXIT
 cls
 echo Exiting...
+%CDP%\adb\adb kill-server
 pause
 
 :UnZipFile <ExtractTo> <newzipfile>
